@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="equipment_title">Equipment - Topone Mechanical Manufacturing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/equipment.css">
+    <link rel="stylesheet" href="css/i18n.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-links">
+                <a href="#" data-i18n="set_homepage">Set Homepage</a>
+                <span>|</span>
+                <a href="#" data-i18n="favorite">Favorite</a>
+            </div>
+            <div class="lang-switch">
+                <a href="#" data-lang-switch="en" data-i18n="lang_en">English</a>
+                <span>|</span>
+                <a href="#" data-lang-switch="cn" data-i18n="lang_cn">中文</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Topone Logo">
+                <div class="logo-text">
+                    <h1 data-i18n="company_name_cn">拓丰机械制造</h1>
+                    <p data-i18n="company_name_en">Topone Mechanical Manufacturing</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="phone-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <div class="phone-info">
+                    <span class="tel-label" data-i18n="tel">TEL</span>
+                    <span class="tel-number">+86 18052834640</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li><a href="product.html" data-i18n="nav_product">Product</a></li>
+                <li class="active"><a href="equipment.html" data-i18n="nav_equipment">Equipment</a></li>
+                <li><a href="partnership.html" data-i18n="nav_partnership">Partnership</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="page-banner equipment-banner">
+        <div class="container">
+            <img src="img/equipment/banner.jpg" alt="Gears">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="equipment-layout">
+                <!-- Sidebar -->
+                <aside class="equipment-sidebar">
+                    <h3 class="sidebar-title" data-i18n="equipment_online_service">Online Service</h3>
+                    <div class="sidebar-content">
+                        <div class="qr-section">
+                            <p class="qr-text" data-i18n="equipment_qr_text" onclick="openQRModal()">Get wechat QR code</p>
+                        </div>
+                        <div class="info-section">
+                            <h4><span class="icon icon-clock"></span><span data-i18n="about_work_time">Work Time</span></h4>
+                            <p data-i18n="about_work_time_weekday">Mon to Fri : 8:30-17:30</p>
+                            <p data-i18n="about_work_time_weekend">Sat to Sun : 9:00-17:00</p>
+                        </div>
+                        <div class="info-section">
+                            <h4><span class="icon icon-contact"></span><span data-i18n="contact_info">Contact Details</span></h4>
+                            <p><strong data-i18n="about_manager">General Manager:</strong> +86 139 0610 7239</p>
+                            <p><strong data-i18n="about_eu_agent">European Agent:</strong> +00 336 07431791</p>
+                            <p><strong data-i18n="about_sales">Sales Representative:</strong> +1 236 992 6606</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Equipment Content -->
+                <div class="equipment-content">
+                    <!-- Quality Assurance Section -->
+                    <section class="equipment-section">
+                        <h3 class="section-title" data-i18n="equipment_quality">Devices For Quality Assurance</h3>
+                        <div class="equipment-grid">
+                            <div class="equipment-item" data-quality-index="0">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/1.jpg" alt="3D Coordinate Measurement">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_3d">3D Coordinate Measurement</p>
+                            </div>
+                            <div class="equipment-item" data-quality-index="1">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/2.jpg" alt="Magnetic Particle Inspector">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_magnetic">Magnetic Particle Inspector</p>
+                            </div>
+                            <div class="equipment-item" data-quality-index="2">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/3.jpg" alt="Large Ultrasonic Flaw Detector">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_ultrasonic_large">Large Ultrasonic Flaw Detector</p>
+                            </div>
+                            <div class="equipment-item" data-quality-index="3">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/4.jpg" alt="Portable Ultrasonic Flaw Detector">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_ultrasonic_portable">Portable Ultrasonic Flaw Detector</p>
+                            </div>
+                            <div class="equipment-item" data-quality-index="4">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/5.jpg" alt="Metallurgical Microscope">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_microscope">Metallurgical Microscope</p>
+                            </div>
+                            <div class="equipment-item" data-quality-index="5">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/6.jpg" alt="Tensile Strength Tester">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_tensile">Tensile Strength Tester</p>
+                            </div>
+                            <div class="equipment-item" data-quality-index="6">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/7.png" alt="Hardness Tester">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_hardness">Hardness Tester</p>
+                            </div>
+                            <div class="equipment-item" data-quality-index="7">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/8.png" alt="German Spectrometer">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_spectrometer">German Spectrometer</p>
+                            </div>
+                            <div class="equipment-item" data-quality-index="8">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/1/9.png" alt="Impact Testing Machine">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_impact">Impact Testing Machine</p>
+                            </div>
+                        </div>
+                        <p class="section-note" data-i18n="product_list_end">TO THE END >></p>
+                    </section>
+
+                    <!-- Production Section -->
+                    <section class="equipment-section">
+                        <h3 class="section-title" data-i18n="equipment_production">Devices For Production</h3>
+                        <div class="equipment-grid production-equipment">
+                            <div class="equipment-item" data-production-index="0">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/2/1.jpg" alt="Die Casting Machine for Aluminum">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_die_casting">Die Casting Machine for Aluminum</p>
+                            </div>
+                            <div class="equipment-item" data-production-index="1">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/2/2.jpg" alt="Quenching Furnace">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_quenching">Quenching Furnace</p>
+                            </div>
+                            <div class="equipment-item" data-production-index="2">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/2/3.jpg" alt="Tempering Furnace">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_tempering">Tempering Furnace</p>
+                            </div>
+                            <div class="equipment-item" data-production-index="3">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/2/4.jpg" alt="Normalisation Furnace">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_normalizing">Normalisation Furnace</p>
+                            </div>
+                            <div class="equipment-item" data-production-index="4">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/2/5.jpg" alt="Shot Blasting Equipment">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_shot">Shot Blasting Equipment</p>
+                            </div>
+                            <div class="equipment-item" data-production-index="5">
+                                <div class="equipment-image">
+                                    <img src="img/equipment/2/6.jpg" alt="Electric Saw Cutting Machine">
+                                </div>
+                                <p class="equipment-name" data-i18n="equip_cutting">Electric Saw Cutting Machine</p>
+                            </div>
+                        </div>
+                        <p class="section-note" data-i18n="product_list_end">TO THE END >></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="copyright">&copy;2026 Topone Mechanical Manufacturing copyright</p>
+            <a href="#" class="login-link" data-i18n="login">Login</a>
+        </div>
+    </footer>
+
+    <!-- i18n Script -->
+    <script src="js/i18n.js"></script>
+    
+    <!-- Quality Lightbox Script -->
+    <script>
+        // Quality Equipment Lightbox with Card Carousel
+        (function() {
+            const qualityItems = document.querySelectorAll('.equipment-item[data-quality-index]');
+            const qualityData = [
+                { src: 'img/equipment/1/1.jpg', name: '3D Coordinate Measurement', nameCn: '三坐标测量仪' },
+                { src: 'img/equipment/1/2.jpg', name: 'Magnetic Particle Inspector', nameCn: '磁粉探伤仪' },
+                { src: 'img/equipment/1/3.jpg', name: 'Large Ultrasonic Flaw Detector', nameCn: '大型超声波探伤仪' },
+                { src: 'img/equipment/1/4.jpg', name: 'Portable Ultrasonic Flaw Detector', nameCn: '便携式超声波探伤仪' },
+                { src: 'img/equipment/1/5.jpg', name: 'Metallurgical Microscope', nameCn: '金相显微镜' },
+                { src: 'img/equipment/1/6.jpg', name: 'Tensile Strength Tester', nameCn: '拉伸强度测试仪' },
+                { src: 'img/equipment/1/7.png', name: 'Hardness Tester', nameCn: '硬度测试仪' },
+                { src: 'img/equipment/1/8.png', name: 'German Spectrometer', nameCn: '德国光谱仪' },
+                { src: 'img/equipment/1/9.png', name: 'Impact Testing Machine', nameCn: '冲击试验机' }
+            ];
+            
+            let currentIndex = 0;
+            let lightbox = null;
+            
+            // Create lightbox HTML structure with card carousel
+            function createLightbox() {
+                const currentLang = localStorage.getItem('language') || 'en';
+                lightbox = document.createElement('div');
+                lightbox.className = 'quality-lightbox';
+                lightbox.innerHTML = `
+                    <div class="quality-lightbox-overlay"></div>
+                    <div class="quality-lightbox-container">
+                        <button class="quality-lightbox-close">&times;</button>
+                        <button class="quality-lightbox-prev">&#10094;</button>
+                        <button class="quality-lightbox-next">&#10095;</button>
+                        <div class="quality-lightbox-carousel">
+                            <div class="quality-lightbox-track">
+                                ${qualityData.map((item, index) => `
+                                    <div class="quality-lightbox-card" data-index="${index}">
+                                        <div class="quality-lightbox-image-wrap">
+                                            <img src="${item.src}" alt="${item.name}" class="quality-lightbox-img">
+                                        </div>
+                                        <p class="quality-lightbox-caption" data-caption-index="${index}">${currentLang === 'cn' ? item.nameCn : item.name}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div class="quality-lightbox-counter">1/9</div>
+                    </div>
+                `;
+                document.body.appendChild(lightbox);
+                
+                // Close button
+                lightbox.querySelector('.quality-lightbox-close').addEventListener('click', closeLightbox);
+                
+                // Navigation buttons
+                lightbox.querySelector('.quality-lightbox-prev').addEventListener('click', showPrev);
+                lightbox.querySelector('.quality-lightbox-next').addEventListener('click', showNext);
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', handleKeydown);
+            }
+            
+            // Update lightbox carousel position
+            function updateLightboxCarousel() {
+                const track = lightbox.querySelector('.quality-lightbox-track');
+                const cards = lightbox.querySelectorAll('.quality-lightbox-card');
+                const counter = lightbox.querySelector('.quality-lightbox-counter');
+                const captions = lightbox.querySelectorAll('.quality-lightbox-caption');
+                
+                // Center the current card
+                const cardWidth = 280; // card width + gap
+                const containerWidth = lightbox.querySelector('.quality-lightbox-carousel').offsetWidth;
+                const offset = (containerWidth / 2) - (cardWidth / 2) - (currentIndex * cardWidth);
+                track.style.transform = `translateX(${offset}px)`;
+                
+                // Update card states
+                cards.forEach((card, index) => {
+                    card.classList.remove('active', 'prev', 'next');
+                    if (index === currentIndex) {
+                        card.classList.add('active');
+                    } else if (index === currentIndex - 1 || (currentIndex === 0 && index === qualityData.length - 1)) {
+                        card.classList.add('prev');
+                    } else if (index === currentIndex + 1 || (currentIndex === qualityData.length - 1 && index === 0)) {
+                        card.classList.add('next');
+                    }
+                });
+                
+                // Update counter
+                counter.textContent = `${currentIndex + 1}/${qualityData.length}`;
+                
+                // Update all captions based on current language
+                const currentLang = localStorage.getItem('language') || 'en';
+                captions.forEach((caption, index) => {
+                    caption.textContent = currentLang === 'cn' ? qualityData[index].nameCn : qualityData[index].name;
+                });
+            }
+            
+            // Open lightbox with specific index
+            function openLightbox(index) {
+                if (!lightbox) {
+                    createLightbox();
+                }
+                currentIndex = index;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                updateLightboxCarousel();
+            }
+            
+            // Close lightbox
+            function closeLightbox() {
+                if (lightbox) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            // Show previous
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + qualityData.length) % qualityData.length;
+                updateLightboxCarousel();
+            }
+            
+            // Show next
+            function showNext() {
+                currentIndex = (currentIndex + 1) % qualityData.length;
+                updateLightboxCarousel();
+            }
+            
+            // Handle keyboard navigation
+            function handleKeydown(e) {
+                if (!lightbox || !lightbox.classList.contains('active')) return;
+                
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+            }
+            
+            // Add click event to quality items
+            qualityItems.forEach((item) => {
+                item.style.cursor = 'pointer';
+                const index = parseInt(item.dataset.qualityIndex);
+                item.addEventListener('click', () => {
+                    openLightbox(index);
+                });
+            });
+        })();
+    </script>
+    
+    <!-- Equipment Lightbox Script -->
+    <script>
+        // Equipment Lightbox functionality
+        (function() {
+            const equipmentItems = document.querySelectorAll('.equipment-item[data-production-index]');
+            const equipmentData = [
+                { src: 'img/equipment/2/1.jpg', name: 'Die Casting Machine for Aluminum', nameCn: '铝压铸机' },
+                { src: 'img/equipment/2/2.jpg', name: 'Quenching Furnace', nameCn: '淬火炉' },
+                { src: 'img/equipment/2/3.jpg', name: 'Tempering Furnace', nameCn: '回火炉' },
+                { src: 'img/equipment/2/4.jpg', name: 'Normalisation Furnace', nameCn: '正火炉' },
+                { src: 'img/equipment/2/5.jpg', name: 'Shot Blasting Equipment', nameCn: '抛丸设备' },
+                { src: 'img/equipment/2/6.jpg', name: 'Electric Saw Cutting Machine', nameCn: '电锯切割机' }
+            ];
+            
+            let currentIndex = 0;
+            let lightbox = null;
+            let lightboxImage = null;
+            let lightboxCounter = null;
+            let lightboxCaption = null;
+            
+            // Create lightbox HTML structure
+            function createLightbox() {
+                lightbox = document.createElement('div');
+                lightbox.className = 'equipment-lightbox';
+                lightbox.innerHTML = `
+                    <div class="lightbox-overlay"></div>
+                    <div class="lightbox-container">
+                        <button class="lightbox-close">&times;</button>
+                        <button class="lightbox-prev">&#10094;</button>
+                        <button class="lightbox-next">&#10095;</button>
+                        <div class="lightbox-content">
+                            <img src="" alt="" class="lightbox-image">
+                        </div>
+                        <div class="lightbox-info">
+                            <span class="lightbox-counter">1/6</span>
+                            <p class="lightbox-caption"></p>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(lightbox);
+                
+                lightboxImage = lightbox.querySelector('.lightbox-image');
+                lightboxCounter = lightbox.querySelector('.lightbox-counter');
+                lightboxCaption = lightbox.querySelector('.lightbox-caption');
+                
+                // Close button
+                lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+                // Note: Overlay click to close is disabled as per requirement
+                
+                // Navigation buttons
+                lightbox.querySelector('.lightbox-prev').addEventListener('click', showPrev);
+                lightbox.querySelector('.lightbox-next').addEventListener('click', showNext);
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', handleKeydown);
+            }
+            
+            // Open lightbox with specific index
+            function openLightbox(index) {
+                if (!lightbox) {
+                    createLightbox();
+                }
+                currentIndex = index;
+                updateLightbox();
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Close lightbox
+            function closeLightbox() {
+                if (lightbox) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            // Update lightbox content
+            function updateLightbox() {
+                const data = equipmentData[currentIndex];
+                lightboxImage.src = data.src;
+                lightboxImage.alt = data.name;
+                lightboxCounter.textContent = `${currentIndex + 1}/${equipmentData.length}`;
+                
+                // Check current language
+                const currentLang = localStorage.getItem('language') || 'en';
+                lightboxCaption.textContent = currentLang === 'cn' ? data.nameCn : data.name;
+            }
+            
+            // Show previous image
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + equipmentData.length) % equipmentData.length;
+                updateLightbox();
+            }
+            
+            // Show next image
+            function showNext() {
+                currentIndex = (currentIndex + 1) % equipmentData.length;
+                updateLightbox();
+            }
+            
+            // Handle keyboard navigation
+            function handleKeydown(e) {
+                if (!lightbox || !lightbox.classList.contains('active')) return;
+                
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+            }
+            
+            // Add click event to equipment items
+            equipmentItems.forEach((item) => {
+                item.style.cursor = 'pointer';
+                const index = parseInt(item.dataset.productionIndex);
+                item.addEventListener('click', () => {
+                    openLightbox(index);
+                });
+            });
+        })();
+    </script>
+
+    <!-- QR Code Modal -->
+    <div id="qrModal" class="qr-modal">
+        <div class="qr-modal-content">
+            <span class="qr-close" onclick="closeQRModal()">&times;</span>
+            <div class="qr-image-container">
+                <img src="img/qrcode.jpg" alt="WeChat QR Code">
+            </div>
+            <p class="qr-caption" data-i18n="scan_qrcode">Scan QRcode</p>
+        </div>
+    </div>
+
+    <script>
+        // Open QR Modal
+        function openQRModal() {
+            document.getElementById('qrModal').style.display = 'flex';
+        }
+
+        // Close QR Modal
+        function closeQRModal() {
+            document.getElementById('qrModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            var modal = document.getElementById('qrModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

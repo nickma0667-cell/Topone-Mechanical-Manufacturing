@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="product_detail">Product Detail - Topone Mechanical Manufacturing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/i18n.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-links">
+                <a href="#" data-i18n="set_homepage">Set Homepage</a>
+                <span>|</span>
+                <a href="#" data-i18n="favorite">Favorite</a>
+            </div>
+            <div class="lang-switch">
+                <a href="#" data-lang-switch="en" data-i18n="lang_en">English</a>
+                <span>|</span>
+                <a href="#" data-lang-switch="cn" data-i18n="lang_cn">中文</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Topone Logo">
+                <div class="logo-text">
+                    <h1 data-i18n="company_name_cn">拓丰机械制造</h1>
+                    <p data-i18n="company_name_en">Topone Mechanical Manufacturing</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="phone-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <div class="phone-info">
+                    <span class="tel-label" data-i18n="tel">TEL</span>
+                    <span class="tel-number">+86 18052834640</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="active"><a href="product.html" data-i18n="nav_product">Product</a></li>
+                <li><a href="equipment.html" data-i18n="nav_equipment">Equipment</a></li>
+                <li><a href="partnership.html" data-i18n="nav_partnership">Partnership</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="page-banner product-detail-banner">
+        <div class="container">
+            <img src="img/product/banner.jpg" alt="Product Detail">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-detail-layout">
+                <!-- Left Sidebar Menu -->
+                <aside class="detail-sidebar">
+                    <h3 class="sidebar-title" data-i18n="menu_title">Menu</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                        <li><a href="product.html" data-i18n="nav_product">Product</a></li>
+                        <li><a href="equipment.html" data-i18n="nav_equipment">Equipment</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Product Detail Content -->
+                <div class="product-detail-content">
+                    <div class="detail-header">
+                        <span class="detail-icon">▶</span>
+                        <h2 data-i18n="product_detail">Product Detail</h2>
+                    </div>
+
+                    <div class="product-showcase">
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-list" id="thumbnail-list">
+                            <!-- Thumbnails will be loaded dynamically -->
+                        </div>
+
+                        <!-- Main Image -->
+                        <div class="main-image-container">
+                            <img id="main-image" src="" alt="Product Image">
+                        </div>
+
+                        <!-- Product Info -->
+                        <div class="product-info">
+                            <h1 id="product-name" class="product-name">Product Name</h1>
+                            <div class="product-meta" id="product-meta">
+                                <!-- Meta info will be loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Share Section -->
+                    <div class="share-section">
+                        <span data-i18n="product_share">Share to:</span>
+                        <div class="share-icons">
+                            <a href="#" class="share-icon share-wechat" title="WeChat"></a>
+                            <a href="#" class="share-icon share-weibo" title="Weibo"></a>
+                            <a href="#" class="share-icon share-qq" title="QQ"></a>
+                            <a href="#" class="share-icon share-douban" title="Douban"></a>
+                            <a href="#" class="share-icon share-renren" title="Renren"></a>
+                            <a href="#" class="share-icon share-more" title="More"></a>
+                        </div>
+                    </div>
+
+                    <!-- Product Description -->
+                    <div class="product-description-section">
+                        <div class="description-header">
+                            <h3 data-i18n="product_detail">Product Detail</h3>
+                        </div>
+                        <div class="description-content" id="product-description">
+                            <!-- Description will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="copyright">&copy;2026 Topone Mechanical Manufacturing copyright</p>
+            <a href="#" class="login-link" data-i18n="login">Login</a>
+        </div>
+    </footer>
+
+    <!-- Product Data -->
+    <script src="js/product.js"></script>
+    <!-- i18n Script -->
+    <script src="js/i18n.js"></script>
+    <script>
+        // Load product detail
+        function loadProductDetail() {
+            const id = ProductData.utils.getUrlParam('id') || 'spring-bearing';
+            const product = ProductData.utils.getProductById(id);
+            const currentLang = I18n.getCurrentLang();
+
+            if (product) {
+                // Set product name
+                const productName = ProductData.utils.getProductName(product, currentLang);
+                document.getElementById('product-name').textContent = productName;
+
+                // Set product meta info
+                const metaHtml = `
+                    <p><strong>Material:</strong> ${product.material || 'N/A'}</p>
+                    <p><strong>Weight:</strong> ${product.weight || 'N/A'}</p>
+                    <p><strong>Application:</strong> ${product.application || 'N/A'}</p>
+                `;
+                document.getElementById('product-meta').innerHTML = metaHtml;
+
+                // Set product description
+                const description = ProductData.utils.getProductDescription(product, currentLang);
+                document.getElementById('product-description').innerHTML = `<p>${description}</p>`;
+
+                // Load thumbnails and main image
+                const thumbnailList = document.getElementById('thumbnail-list');
+                const mainImage = document.getElementById('main-image');
+
+                // Clear existing thumbnails
+                thumbnailList.innerHTML = '';
+
+                // Create thumbnails
+                product.images.forEach((imgSrc, index) => {
+                    const thumb = document.createElement('div');
+                    thumb.className = 'thumbnail' + (index === 0 ? ' active' : '');
+                    thumb.innerHTML = `<img src="${imgSrc}" alt="${productName} ${index + 1}">`;
+                    thumb.onclick = function() {
+                        // Update main image
+                        mainImage.src = imgSrc;
+                        // Update active state
+                        document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                        thumb.classList.add('active');
+                    };
+                    thumbnailList.appendChild(thumb);
+                });
+
+                // Set initial main image
+                mainImage.src = product.images[0] || product.coverImage;
+            } else {
+                // Product not found
+                document.getElementById('product-name').textContent = 'Product Not Found';
+                document.getElementById('product-description').innerHTML = '<p>Sorry, the requested product could not be found.</p>';
+            }
+        }
+
+        // Load product detail on page load
+        document.addEventListener('DOMContentLoaded', loadProductDetail);
+
+        // Re-render when language changes
+        document.addEventListener('languageChanged', loadProductDetail);
+    </script>
+</body>
+</html>

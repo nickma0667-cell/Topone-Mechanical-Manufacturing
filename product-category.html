@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="product_title">Product Category - Topone Mechanical Manufacturing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-category.css">
+    <link rel="stylesheet" href="css/i18n.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-links">
+                <a href="#" data-i18n="set_homepage">Set Homepage</a>
+                <span>|</span>
+                <a href="#" data-i18n="favorite">Favorite</a>
+            </div>
+            <div class="lang-switch">
+                <a href="#" data-lang-switch="en" data-i18n="lang_en">English</a>
+                <span>|</span>
+                <a href="#" data-lang-switch="cn" data-i18n="lang_cn">中文</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Topone Logo">
+                <div class="logo-text">
+                    <h1 data-i18n="company_name_cn">拓丰机械制造</h1>
+                    <p data-i18n="company_name_en">Topone Mechanical Manufacturing</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="phone-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <div class="phone-info">
+                    <span class="tel-label" data-i18n="tel">TEL</span>
+                    <span class="tel-number">+86 18052834640</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="active"><a href="product.html" data-i18n="nav_product">Product</a></li>
+                <li><a href="equipment.html" data-i18n="nav_equipment">Equipment</a></li>
+                <li><a href="partnership.html" data-i18n="nav_partnership">Partnership</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="page-banner product-category-banner">
+        <div class="container">
+            <img src="img/product/banner.jpg" alt="Product Category">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="category-layout">
+                <!-- Left Sidebar -->
+                <aside class="category-sidebar">
+                    <!-- Menu -->
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title" data-i18n="menu_title">Menu</h3>
+                        <ul class="sidebar-menu">
+                            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                            <li><a href="product.html" data-i18n="nav_product">Product</a></li>
+                            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Filter -->
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title" data-i18n="product_filter">Filter</h3>
+                        <ul class="filter-menu" id="filter-menu">
+                            <!-- Filter menu will be loaded dynamically -->
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Category Content -->
+                <div class="category-content">
+                    <div class="category-header">
+                        <span class="category-icon">▶</span>
+                        <h2 id="category-title">Category Title</h2>
+                    </div>
+
+                    <div class="category-info">
+                        <span data-i18n="product_category">Category:</span><span id="category-name">Category Name</span><span class="delete-link" data-i18n="product_delete">[Delete]</span>
+                        <button class="slide-btn" onclick="openSlideModal()" data-i18n="product_slide">Slide</button>
+                    </div>
+
+                    <!-- Product List -->
+                    <div class="category-product-list" id="product-list">
+                        <!-- Products will be loaded dynamically -->
+                    </div>
+
+                    <div class="list-end" data-i18n="product_list_end">to the end ~</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="copyright">&copy;2026 Topone Mechanical Manufacturing copyright</p>
+            <a href="#" class="login-link" data-i18n="login">Login</a>
+        </div>
+    </footer>
+
+    <!-- Product Data -->
+    <script src="js/product.js"></script>
+    <!-- i18n Script -->
+    <script src="js/i18n.js"></script>
+    <script>
+        // Render filter menu
+        function renderFilterMenu(currentCategory) {
+            const filterMenu = document.getElementById('filter-menu');
+            const categories = ProductData.utils.getAllCategories();
+            const currentLang = I18n.getCurrentLang();
+            
+            filterMenu.innerHTML = categories.map(category => {
+                const categoryName = ProductData.utils.getCategoryName(category, currentLang);
+                return `
+                    <li><a href="product-category.html?category=${category.id}" 
+                           data-category="${category.id}" 
+                           class="${category.id === currentCategory ? 'active' : ''}">${categoryName}</a></li>
+                `;
+            }).join('');
+        }
+
+        // Load category content
+        function loadCategoryContent() {
+            const categoryId = ProductData.utils.getUrlParam('category') || 'crystal-sand';
+            const category = ProductData.utils.getCategoryById(categoryId);
+            const currentLang = I18n.getCurrentLang();
+
+            if (category) {
+                // Update category title
+                const categoryName = ProductData.utils.getCategoryName(category, currentLang);
+                document.getElementById('category-title').textContent = categoryName;
+                document.getElementById('category-name').textContent = categoryName;
+
+                // Render filter menu with active state
+                renderFilterMenu(categoryId);
+
+                // Filter products by category
+                const filteredProducts = ProductData.utils.getProductsByCategory(categoryId);
+
+                // Render products
+                const productList = document.getElementById('product-list');
+                productList.innerHTML = '';
+
+                if (filteredProducts.length > 0) {
+                    filteredProducts.forEach((product, index) => {
+                        const productName = ProductData.utils.getProductName(product, currentLang);
+                        const productItem = document.createElement('div');
+                        productItem.className = 'category-product-item';
+                        productItem.style.cursor = 'pointer';
+                        productItem.onclick = function() {
+                            openSlideModalFromIndex(index);
+                        };
+                        productItem.innerHTML = `
+                            <div class="product-image">
+                                <img src="${product.coverImage}" alt="${productName}">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">${productName}</h3>
+                            </div>
+                        `;
+                        productList.appendChild(productItem);
+                    });
+                } else {
+                    productList.innerHTML = `<p class="no-products" data-i18n="product_no_products">No products found in this category.</p>`;
+                }
+            }
+        }
+
+        // Load content on page load
+        document.addEventListener('DOMContentLoaded', loadCategoryContent);
+
+        // Re-render when language changes
+        document.addEventListener('languageChanged', loadCategoryContent);
+
+        // Slide Modal functionality
+        let slideProducts = [];
+        let currentSlideIndex = 0;
+
+        function openSlideModal() {
+            const categoryId = ProductData.utils.getUrlParam('category') || 'crystal-sand';
+            slideProducts = ProductData.utils.getProductsByCategory(categoryId);
+            if (slideProducts.length === 0) return;
+
+            currentSlideIndex = 0;
+            renderSlide();
+            document.getElementById('slideModal').style.display = 'flex';
+        }
+
+        function openSlideModalFromIndex(index) {
+            const categoryId = ProductData.utils.getUrlParam('category') || 'crystal-sand';
+            slideProducts = ProductData.utils.getProductsByCategory(categoryId);
+            if (slideProducts.length === 0) return;
+
+            currentSlideIndex = index;
+            renderSlide();
+            document.getElementById('slideModal').style.display = 'flex';
+        }
+
+        function closeSlideModal() {
+            document.getElementById('slideModal').style.display = 'none';
+        }
+
+        function showPrevSlide() {
+            if (slideProducts.length === 0) return;
+            currentSlideIndex = (currentSlideIndex - 1 + slideProducts.length) % slideProducts.length;
+            renderSlide();
+        }
+
+        function showNextSlide() {
+            if (slideProducts.length === 0) return;
+            currentSlideIndex = (currentSlideIndex + 1) % slideProducts.length;
+            renderSlide();
+        }
+
+        function renderSlide() {
+            const product = slideProducts[currentSlideIndex];
+            if (!product) return;
+
+            const currentLang = I18n.getCurrentLang();
+            const productName = ProductData.utils.getProductName(product, currentLang);
+
+            // Update main image
+            const mainImage = document.getElementById('slideMainImage');
+            if (mainImage && product.coverImage) {
+                mainImage.src = product.coverImage;
+                mainImage.alt = productName;
+            }
+
+            // Update product info
+            const nameEl = document.getElementById('slideProductName');
+            if (nameEl) nameEl.textContent = productName;
+
+            const priceEl = document.getElementById('slideProductPrice');
+            if (priceEl) {
+                const currentLang = I18n.getCurrentLang();
+                const priceText = product.price || (currentLang === 'cn' ? '联系询价' : 'Contact for Price');
+                priceEl.textContent = priceText;
+            }
+
+            // Update thumbnails - show all products in category
+            const thumbnailsContainer = document.getElementById('slideThumbnails');
+            if (thumbnailsContainer) {
+                thumbnailsContainer.innerHTML = slideProducts.map((p, index) => {
+                    const pName = ProductData.utils.getProductName(p, currentLang);
+                    return `
+                        <img src="${p.coverImage}" alt="${pName}" 
+                             class="slide-thumbnail ${index === currentSlideIndex ? 'active' : ''}" 
+                             onclick="goToSlide(${index})">
+                    `;
+                }).join('');
+            }
+        }
+
+        function goToSlide(index) {
+            currentSlideIndex = index;
+            renderSlide();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            var modal = document.getElementById('slideModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const modal = document.getElementById('slideModal');
+            if (modal.style.display === 'flex') {
+                if (e.key === 'Escape') closeSlideModal();
+                if (e.key === 'ArrowLeft') showPrevSlide();
+                if (e.key === 'ArrowRight') showNextSlide();
+            }
+        });
+    </script>
+
+    <!-- Slide Modal -->
+    <div id="slideModal" class="slide-modal">
+        <div class="slide-modal-content">
+            <span class="slide-close" onclick="closeSlideModal()">&times;</span>
+            <div class="slide-container">
+                <button class="slide-nav slide-prev" onclick="showPrevSlide()">&#10094;</button>
+                <div class="slide-main">
+                    <div class="slide-image-wrapper">
+                        <img id="slideMainImage" src="" alt="">
+                    </div>
+                    <div class="slide-info">
+                        <h3 id="slideProductName"></h3>
+                    </div>
+                </div>
+                <button class="slide-nav slide-next" onclick="showNextSlide()">&#10095;</button>
+            </div>
+            <div class="slide-thumbnails" id="slideThumbnails"></div>
+        </div>
+    </div>
+</body>
+</html>
