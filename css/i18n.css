@@ -1,0 +1,50 @@
+/* i18n Language Switcher Styles */
+
+/* Language switcher active state */
+.lang-switch a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.lang-switch a.active {
+    color: #c41e3a;
+    font-weight: bold;
+}
+
+.lang-switch a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #c41e3a;
+}
+
+.lang-switch a:hover {
+    color: #c41e3a;
+}
+
+/* Smooth transition for text changes */
+[data-i18n] {
+    transition: opacity 0.2s ease;
+}
+
+/* RTL support preparation (if needed in future) */
+[dir="rtl"] [data-i18n] {
+    text-align: right;
+}
+
+/* Language-specific font adjustments */
+html[lang="zh-CN"] body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+html[lang="en"] body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure proper line height for Chinese text */
+html[lang="zh-CN"] [data-i18n] {
+    line-height: 1.6;
+}

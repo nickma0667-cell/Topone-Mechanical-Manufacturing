@@ -1,0 +1,88 @@
+/* Partnership Page Styles */
+
+/* Partnership Banner */
+.partnership-banner {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    overflow: hidden;
+}
+
+.partnership-banner img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.9;
+}
+
+/* Partnership Grid */
+.partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 0;
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+/* Partner Card */
+.partner-card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #333;
+    overflow: hidden;
+    height: 200px;
+}
+
+.partner-info {
+    flex: 1;
+    background: linear-gradient(135deg, #4472C4 0%, #2E5C9E 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.partner-info h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.partner-info p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.more-btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #4472C4;
+    padding: 6px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    text-align: center;
+    align-self: flex-start;
+    transition: all 0.3s;
+}
+
+.more-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.partner-logo {
+    flex: 0 0 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
